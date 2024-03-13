@@ -95,7 +95,7 @@ def download_image(image_url, destination_path):
 
 def process_image(image_path):
     """Process an image: analyze, generate a new image, and save relevant data."""
-
+    print("in process_image")
     # Extract the base filename (without extension) to use as the folder name
     base_filename = os.path.splitext(os.path.basename(image_path))[0]
     
@@ -167,7 +167,7 @@ def process_all_images_in_folder(folder_path):
     for jpeg_file in jpeg_files:
         image_path = os.path.join(folder_path, jpeg_file)
         print(f"Processing {image_path}...")
-        #process_image(image_path)  # Assuming process_image is defined as before
+        process_image(image_path)  # Assuming process_image is defined as before
 
 
 if __name__ == '__main__':
